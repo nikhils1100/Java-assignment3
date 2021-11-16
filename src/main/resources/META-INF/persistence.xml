@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<persistence version="2.1"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="tenant_book_dev">
+
+        <class>com.example.bookCrud.Model.Book</class>
+        <class>com.example.bookCrud.Model.Sales</class>
+        <class>com.example.bookCrud.Model.User</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/books"/>
+            <property name="javax.persistence.jdbc.user" value="nik_book"/>
+            <property name="javax.persistence.jdbc.password" value="password"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="tenant_book_test">
+        <class>com.example.bookCrud.Model.Book</class>
+        <class>com.example.bookCrud.Model.Sales</class>
+        <class>com.example.bookCrud.Model.User</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/books_test"/>
+            <property name="javax.persistence.jdbc.user" value="nik_book"/>
+            <property name="javax.persistence.jdbc.password" value="password"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="tenant_book_prod">
+        <class>com.example.bookCrud.Model.Book</class>
+        <class>com.example.bookCrud.Model.Sales</class>
+        <class>com.example.bookCrud.Model.User</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/books_prod"/>
+            <property name="javax.persistence.jdbc.user" value="nik_book"/>
+            <property name="javax.persistence.jdbc.password" value="password"/>
+        </properties>
+    </persistence-unit>
+
+    <!--    <persistence-unit name="tenant_coi_prod">-->
+    <!--        <class>org.coi.conedauthorizer.models.model.ConEdAuthorizer</class>-->
+    <!--        <properties>-->
+    <!--            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>-->
+    <!--            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://coioptimizer-production.cfbwew0xrbex.us-east-1.rds.amazonaws.com:3306/coioptimizer?useSSL=false"/>-->
+    <!--            <property name="javax.persistence.jdbc.user" value="coienergy"/>-->
+    <!--            <property name="javax.persistence.jdbc.password" value="devOps0208"/>-->
+    <!--            <property name="hbm2ddl.auto" value="create"/>-->
+    <!--        </properties>-->
+    <!--    </persistence-unit>-->
+
+
+</persistence>

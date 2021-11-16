@@ -1,4 +1,4 @@
-package extra;
+package config;
 
 import com.example.multiTenant.TenantNotFoundException;
 import com.example.multiTenant.TenantResolvingException;
@@ -21,7 +21,7 @@ import java.util.function.Function;
 
 import static java.lang.String.format;
 
-@Configuration
+//@Configuration
 public class MultiTenantManager {
 
     private final ThreadLocal<String> currentTenant = new ThreadLocal<>();
@@ -40,7 +40,7 @@ public class MultiTenantManager {
     }
 
     @Primary
-    @Bean
+//    @Bean
     public DataSource tenantDataSource() {
         multiTenantDataSource = new AbstractRoutingDataSource() {
             @Override
